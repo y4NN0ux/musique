@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,9 +9,9 @@
 
 <style>
 
-/* =========================
+/* =====================================================
    BASE
-   ========================= */
+   ===================================================== */
 
 * {
   box-sizing: border-box;
@@ -20,37 +21,60 @@ html,
 body {
   margin: 0;
   padding: 0;
+
+  width: 100%;
+  height: auto;
+  min-height: 0;
+
+  max-width: 100%;
+
+  background: transparent;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+/* =====================================================
+   CONTENEURS
+   ===================================================== */
+
+#mobile-content,
+#desktop-content {
+  margin: 0;
+  padding: 0;
+
   width: 100%;
   max-width: 100%;
-  background: transparent;
+
+  min-height: 0;
+
   overflow-x: hidden;
 }
 
 
-/* =========================
-   CONTENU MOBILE
-   ========================= */
+/* =====================================================
+   VERSION MOBILE
+   ===================================================== */
 
 #mobile-content {
   display: none;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 
-/* =========================
-   BOUTON MOBILE
-   ========================= */
+/* =====================================================
+   BOUTON BANDSINTOWN MOBILE
+   ===================================================== */
 
 .bandsintown-mobile-button {
+
   display: block;
 
   width: calc(100% - 12px);
   max-width: 360px;
 
-  margin: 6px auto;
-  padding: 12px 10px;
+  margin: 2px auto;
+  padding: 10px 8px;
 
   background-color: #F5A623;
   color: #000000;
@@ -59,51 +83,58 @@ body {
   text-decoration: none;
 
   font-family: Arial, sans-serif;
+
   font-size: 14px;
+  line-height: 18px;
   font-weight: bold;
 
   border-radius: 6px;
 
-  /* Nouveau rouge */
   border: 1px solid rgba(204, 67, 49, 1);
 
   box-sizing: border-box;
 
   transform: none;
+
+  overflow: hidden;
 }
 
 
-/* =========================
-   EFFET SOURIS UNIQUEMENT
-   ========================= */
+/* =====================================================
+   SURVOL AVEC SOURIS UNIQUEMENT
+   ===================================================== */
 
 @media (hover: hover) and (pointer: fine) {
 
   .bandsintown-mobile-button:hover {
+
     background-color: rgba(204, 67, 49, 1);
     color: #FFFFFF;
+
   }
 
 }
 
 
-/* =========================
-   APPAREILS TACTILES
-   ========================= */
+/* =====================================================
+   ÉCRAN TACTILE
+   ===================================================== */
 
 @media (hover: none) {
 
   .bandsintown-mobile-button:hover {
+
     background-color: #F5A623;
     color: #000000;
+
   }
 
 }
 
 
-/* =========================
-   VERSION MOBILE
-   ========================= */
+/* =====================================================
+   MOBILE
+   ===================================================== */
 
 @media screen and (max-width: 700px) {
 
@@ -112,16 +143,27 @@ body {
   }
 
   #mobile-content {
+
     display: block;
-    padding: 6px 0;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
   }
 
 }
 
 
-/* =========================
-   VERSION PC
-   ========================= */
+/* =====================================================
+   PC
+   ===================================================== */
 
 @media screen and (min-width: 701px) {
 
@@ -130,15 +172,25 @@ body {
   }
 
   #desktop-content {
+
     display: block;
+
     width: 100%;
     max-width: 100%;
+
+    height: auto;
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
+
     overflow-x: hidden;
   }
 
 }
 
 </style>
+
 </head>
 
 
@@ -211,8 +263,8 @@ body {
     data-event-ticket-icon="false"
 
     data-event-ticket-cta-text-color="#FFFFFF"
-    data-event-ticket-cta-bg-color="rgba(208,2,27,1)"
-    data-event-ticket-cta-border-color="rgba(208,2,27,1)"
+    data-event-ticket-cta-bg-color="rgba(204,67,49,1)"
+    data-event-ticket-cta-border-color="rgba(204,67,49,1)"
     data-event-ticket-cta-border-width="0px"
     data-event-ticket-cta-border-radius="4px"
 
@@ -228,7 +280,7 @@ body {
     data-event-rsvp-text="ME LE RAPPELER"
     data-event-rsvp-icon="false"
 
-    data-event-rsvp-cta-text-color="#D0021B"
+    data-event-rsvp-cta-text-color="rgba(204,67,49,1)"
     data-event-rsvp-cta-bg-color="#FFFFFF"
     data-event-rsvp-cta-border-color="#F5A623"
     data-event-rsvp-cta-border-width="1px"
@@ -244,7 +296,7 @@ body {
     data-follow-section-cta-icon="true"
 
     data-follow-section-cta-text-color="#FFFFFF"
-    data-follow-section-cta-bg-color="#C30808"
+    data-follow-section-cta-bg-color="rgba(204,67,49,1)"
     data-follow-section-cta-border-color="rgba(204,67,49,1)"
     data-follow-section-cta-border-width="0px"
     data-follow-section-cta-border-radius="4px"
@@ -259,7 +311,7 @@ body {
     data-play-my-city-cta-icon="true"
 
     data-play-my-city-cta-text-color="#FFFFFF"
-    data-play-my-city-cta-bg-color="#D0021B"
+    data-play-my-city-cta-bg-color="rgba(204,67,49,1)"
     data-play-my-city-cta-border-color="rgba(204,67,49,1)"
     data-play-my-city-cta-border-width="0px"
     data-play-my-city-cta-border-radius="4px"
@@ -280,7 +332,7 @@ body {
 
 
 <!-- =====================================================
-     CHARGEMENT BANDSINTOWN
+     BANDSINTOWN
      ===================================================== -->
 
 <script
@@ -291,7 +343,7 @@ body {
 
 
 <!-- =====================================================
-     AJUSTEMENT DE HAUTEUR
+     CALCUL DE HAUTEUR
      ===================================================== -->
 
 <script>
@@ -300,14 +352,20 @@ function sendHeight() {
 
   const height = document.documentElement.scrollHeight;
 
-  window.parent.postMessage({
-    type: "ouistitibaba-height",
-    height: height
-  }, "*");
+  window.parent.postMessage(
+    {
+      type: "ouistitibaba-height",
+      height: height
+    },
+    "*"
+  );
 
 }
 
+
 function updateHeight() {
+
+  sendHeight();
 
   setTimeout(sendHeight, 300);
   setTimeout(sendHeight, 1000);
@@ -316,16 +374,28 @@ function updateHeight() {
 
 }
 
+
 updateHeight();
 
+
+/* Surveillance des changements du widget */
+
 const observer = new MutationObserver(function() {
+
   sendHeight();
+
 });
 
+
 observer.observe(document.body, {
+
   childList: true,
   subtree: true
+
 });
+
+
+/* Redimensionnement */
 
 window.addEventListener("resize", updateHeight);
 
