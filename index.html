@@ -7,79 +7,147 @@
 <title>Ouistitibaba - Concerts</title>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
 
-  body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    font-family: Arial, sans-serif;
-  }
+/* =========================
+   BASE
+   ========================= */
 
-  /* =========================
-     BOUTON MOBILE
-     ========================= */
+* {
+  box-sizing: border-box;
+}
 
-  .bandsintown-mobile-button {
-    display: block;
-    width: 100%;
-    max-width: 360px;
-    margin: 15px auto;
-    padding: 14px 18px;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  overflow-x: hidden;
+}
 
-    background-color: #F5A623;
-    color: #000000;
 
-    text-align: center;
-    text-decoration: none;
+/* =========================
+   CONTENU MOBILE
+   ========================= */
 
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
+#mobile-content {
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-    border-radius: 6px;
-    border: 1px solid #08C3BA;
 
-    transition: background-color 0.2s, transform 0.2s;
-  }
+/* =========================
+   BOUTON MOBILE
+   ========================= */
+
+.bandsintown-mobile-button {
+  display: block;
+
+  width: calc(100% - 12px);
+  max-width: 360px;
+
+  margin: 6px auto;
+  padding: 12px 10px;
+
+  background-color: #F5A623;
+  color: #000000;
+
+  text-align: center;
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+
+  border-radius: 6px;
+
+  /* Nouveau rouge */
+  border: 1px solid rgba(204, 67, 49, 1);
+
+  box-sizing: border-box;
+
+  transform: none;
+}
+
+
+/* =========================
+   EFFET SOURIS UNIQUEMENT
+   ========================= */
+
+@media (hover: hover) and (pointer: fine) {
 
   .bandsintown-mobile-button:hover {
-    background-color: #08C3BA;
-    transform: scale(1.02);
+    background-color: rgba(204, 67, 49, 1);
+    color: #FFFFFF;
   }
 
-  /* =========================
-     CACHER LE BOUTON MOBILE
-     SUR PC
-     ========================= */
+}
 
-  @media screen and (min-width: 701px) {
-    #mobile-content {
-      display: none;
-    }
+
+/* =========================
+   APPAREILS TACTILES
+   ========================= */
+
+@media (hover: none) {
+
+  .bandsintown-mobile-button:hover {
+    background-color: #F5A623;
+    color: #000000;
   }
 
-  /* =========================
-     CACHER LE WIDGET
-     SUR MOBILE
-     ========================= */
+}
 
-  @media screen and (max-width: 700px) {
-    #desktop-content {
-      display: none;
-    }
+
+/* =========================
+   VERSION MOBILE
+   ========================= */
+
+@media screen and (max-width: 700px) {
+
+  #desktop-content {
+    display: none;
   }
+
+  #mobile-content {
+    display: block;
+    padding: 6px 0;
+  }
+
+}
+
+
+/* =========================
+   VERSION PC
+   ========================= */
+
+@media screen and (min-width: 701px) {
+
+  #mobile-content {
+    display: none;
+  }
+
+  #desktop-content {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+}
+
 </style>
-
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =====================================================
      VERSION MOBILE
-     ========================= -->
+     ===================================================== -->
 
 <div id="mobile-content">
 
@@ -96,9 +164,10 @@
 </div>
 
 
-<!-- =========================
+
+<!-- =====================================================
      VERSION PC
-     ========================= -->
+     ===================================================== -->
 
 <div id="desktop-content">
 
@@ -132,7 +201,7 @@
     data-date-format="DD/MM/YY"
     data-date-orientation="horizontal"
 
-    data-date-border-color="#08C3BA"
+    data-date-border-color="rgba(204,67,49,1)"
     data-date-border-width="1px"
     data-date-capitalization="capitalize"
     data-date-border-radius="10px"
@@ -149,7 +218,7 @@
 
     data-sold-out-button-text-color="#FFFFFF"
     data-sold-out-button-background-color="#9B9B9B"
-    data-sold-out-button-border-color="#08C3BA"
+    data-sold-out-button-border-color="rgba(204,67,49,1)"
     data-sold-out-button-clickable="true"
 
     data-event-rsvp-position="left"
@@ -159,9 +228,9 @@
     data-event-rsvp-text="ME LE RAPPELER"
     data-event-rsvp-icon="false"
 
-    data-event-rsvp-cta-text-color="rgba(208,2,27,1)"
+    data-event-rsvp-cta-text-color="#D0021B"
     data-event-rsvp-cta-bg-color="#FFFFFF"
-    data-event-rsvp-cta-border-color="rgba(245,166,35,1)"
+    data-event-rsvp-cta-border-color="#F5A623"
     data-event-rsvp-cta-border-width="1px"
     data-event-rsvp-cta-border-radius="4px"
 
@@ -175,8 +244,8 @@
     data-follow-section-cta-icon="true"
 
     data-follow-section-cta-text-color="#FFFFFF"
-    data-follow-section-cta-bg-color="rgba(195,8,8,1)"
-    data-follow-section-cta-border-color="#08C3BA"
+    data-follow-section-cta-bg-color="#C30808"
+    data-follow-section-cta-border-color="rgba(204,67,49,1)"
     data-follow-section-cta-border-width="0px"
     data-follow-section-cta-border-radius="4px"
 
@@ -190,8 +259,8 @@
     data-play-my-city-cta-icon="true"
 
     data-play-my-city-cta-text-color="#FFFFFF"
-    data-play-my-city-cta-bg-color="rgba(208,2,27,1)"
-    data-play-my-city-cta-border-color="#08C3BA"
+    data-play-my-city-cta-bg-color="#D0021B"
+    data-play-my-city-cta-border-color="rgba(204,67,49,1)"
     data-play-my-city-cta-border-width="0px"
     data-play-my-city-cta-border-radius="4px"
 
@@ -209,14 +278,59 @@
 </div>
 
 
-<!-- =========================
-     CHARGEMENT BANDSintown
-     ========================= -->
+
+<!-- =====================================================
+     CHARGEMENT BANDSINTOWN
+     ===================================================== -->
 
 <script
   charset="utf-8"
   src="https://widgetv3.bandsintown.com/main.min.js">
 </script>
+
+
+
+<!-- =====================================================
+     AJUSTEMENT DE HAUTEUR
+     ===================================================== -->
+
+<script>
+
+function sendHeight() {
+
+  const height = document.documentElement.scrollHeight;
+
+  window.parent.postMessage({
+    type: "ouistitibaba-height",
+    height: height
+  }, "*");
+
+}
+
+function updateHeight() {
+
+  setTimeout(sendHeight, 300);
+  setTimeout(sendHeight, 1000);
+  setTimeout(sendHeight, 2000);
+  setTimeout(sendHeight, 4000);
+
+}
+
+updateHeight();
+
+const observer = new MutationObserver(function() {
+  sendHeight();
+});
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+
+window.addEventListener("resize", updateHeight);
+
+</script>
+
 
 </body>
 </html>
